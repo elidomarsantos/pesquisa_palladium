@@ -184,14 +184,12 @@ body {
   text-align: center;
   vertical-align: middle;
   color:white;
-  
-
+ 
 }
-
 
 #navbarNav {
   background-color:aquamarine;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   color:black;
 }
@@ -207,7 +205,10 @@ body {
 }
 
 #card_consulta button{
-  font-size: 12px;
+  font-size: 13px;
 }
 
+#card_consulta input{
+  font-size: 18px;
+}
 
