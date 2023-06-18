@@ -4,7 +4,7 @@
 {% block content %}
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-  <h1 class="display-4">Feedback de Desempenho</h1>
+  <h2 >Feedback de Desempenho</h2>
   <br>
   <form method="post">
         {% csrf_token %}
@@ -30,16 +30,17 @@
    </div>
    <br>
    <div class="card-group"  >
-      <div class="card" id='card_pesquisa2'>
+      <div class="card" id='card_pesquisa_a2'>
         <div class="card-body">
-          <h5 class="card-title text-center"> O colaborador <p> demonstra uma atitude positiva no ambiente de trabalho?</h5>
+          <h5 class="card-title text-center"> O colaborador demonstra uma atitude positiva no ambiente de trabalho?</h5>
         </div>
       </div>
 
-      <div class="card" id='card_pesquisa2'>
+      <div class="card" id='card_pesquisa_opção'>
         <div class="card-body">
           <h5>Selecione uma opção:</h5>
-          <select id="competency-1" name='atitude_positiva' required>   
+          <select id="competency-1" name='atitude_positiva' required>  
+            <option value=""></option>
             <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
             <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
             <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -63,10 +64,11 @@
         </div>
       </div>
 
-      <div class="card" id='card_pesquisa3'>
+      <div class="card" id='card_pesquisa_opção'>
         <div class="card-body">
           <h5>Selecione uma opção:</h5>
-          <select id="competency-1" name='trabalho_em_equipe' required>   
+          <select id="competency-1" name='trabalho_em_equipe' required> 
+            <option value=""></option>  
             <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
             <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
             <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -90,10 +92,11 @@
         </div>
       </div>
 
-      <div class="card" id='card_pesquisa4'>
+      <div class="card" id='card_pesquisa_opção'>
         <div class="card-body">
           <h5>Selecione uma opção:</h5>
-          <select id="competency-1" name='atendimento_eficaz_cliente' required>   
+          <select id="competency-1" name='atendimento_eficaz_cliente' required> 
+            <option value=""></option>  
             <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
             <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
             <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -117,10 +120,11 @@
          </div>
        </div>
  
-       <div class="card" id='card_pesquisa5'>
+       <div class="card" id='card_pesquisa_opção'>
          <div class="card-body">
           <h5>Selecione uma opção:</h5>
-           <select id="competency-1" name='comunicação_com_liderança' required>   
+           <select id="competency-1" name='comunicação_com_liderança' required>  
+            <option value=""></option> 
             <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
             <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
             <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -140,14 +144,15 @@
      <div class="card-group"  >
         <div class="card" id='card_pesquisa6'>
           <div class="card-body">
-            <h5>Como você avalia a sua capacidade de promover a coesão e um bom ambiente de trabaho entre seus colegas?</h5>
+            <h5>Como você avalia a sua capacidade de promover a coesão e um bom ambiente de trabalho entre seus colegas?</h5>
           </div>
         </div>
   
-        <div class="card" id='card_pesquisa6'>
+        <div class="card" id='card_pesquisa_opção'>
           <div class="card-body">
             <h5>Selecione uma opção:</h5>
-            <select id="competency-1" name='promoção_união' required>   
+            <select id="competency-1" name='promoção_união' required>  
+              <option value=""></option> 
               <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
               <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
               <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -171,10 +176,11 @@
           </div>
         </div>
   
-        <div class="card" id='card_pesquisa7'>
+        <div class="card" id='card_pesquisa_opção'>
           <div class="card-body">
             <h5>Selecione uma opção:</h5>
-            <select id="competency-1" name='melhorar_qualidade' required>  
+            <select id="competency-1" name='melhorar_qualidade' required>
+              <option value=""></option>  
               <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
               <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
               <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -199,10 +205,11 @@
           </div>
         </div>
   
-        <div class="card" id='card_pesquisa8'>
+        <div class="card" id='card_pesquisa_opção'>
           <div class="card-body">
             <h5>Selecione uma opção:</h5>
-            <select id="competency-1" name='criatividade_redução_custos' required>   
+            <select id="competency-1" name='criatividade_redução_custos' required> 
+              <option value=""></option>  
               <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
               <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
               <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -226,10 +233,11 @@
            </div>
          </div>
    
-         <div class="card" id='card_pesquisa9'>
+         <div class="card" id='card_pesquisa_opção'>
            <div class="card-body">
             <h5>Selecione uma opção:</h5>
-             <select id="competency-1" name='atitude_diante_mudanças' required>   
+             <select id="competency-1" name='atitude_diante_mudanças' required> 
+              <option value=""></option>  
               <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
               <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
               <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
@@ -253,10 +261,11 @@
            </div>
          </div>
    
-         <div class="card" id='card_pesquisa10'>
+         <div class="card" id='card_pesquisa_opção'>
            <div class="card-body">
             <h5>Selecione uma opção:</h5>
-             <select id="competency-1" name='ideias_para_bom_ambiente' required>   
+             <select id="competency-1" name='ideias_para_bom_ambiente' required> 
+              <option value=""></option>  
               <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
               <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
               <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>

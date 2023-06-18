@@ -12,6 +12,14 @@
   }
   }
 
+  *{
+   
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+
+    
+}
+
 
 
 body {
@@ -48,6 +56,28 @@ body {
   color:white;
 }
 
+#card_pesquisa_opção {
+  background-color:lightgray;
+  vertical-align: middle;
+  box-shadow: 25px;
+  border-radius: 2%;
+  height:160px;
+  text-align: center;
+  padding-top: 20px;
+  
+}
+
+#card_pesquisa_a2 {
+  background-color:lightgray;
+  vertical-align: middle;
+  box-shadow: 25px;
+  border-radius: 2%;
+  height:160px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
 #card_pesquisa2 {
   background-color:lightgray;
   vertical-align: middle;
@@ -55,7 +85,7 @@ body {
   border-radius: 2%;
   height:160px;
   text-align: center;
-
+  
 }
 
 #card_pesquisa3 {
@@ -65,8 +95,7 @@ body {
   height:160px;
   text-align: center;
   vertical-align: middle;
-
-
+ 
 }
 
 #card_pesquisa4 {
@@ -151,7 +180,7 @@ body {
   background-color:gray;
   box-shadow: 25px;
   border-radius: 2%;
-  height:180px;
+  height:190px;
   text-align: center;
   vertical-align: middle;
   color:white;
