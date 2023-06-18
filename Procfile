@@ -1,1 +1,1 @@
-web: gunicorn gerenciamento_contas.wsgi
+web: gunicorn pesquisa_desempenho.wsgi
