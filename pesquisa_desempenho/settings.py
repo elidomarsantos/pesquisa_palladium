@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-xfmm!)#8=wq3@-8=9n%%ydmxvm&&5m4fl*ps7z@xpf-t=fh31q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['feedbackpalladium.up.railway.app/', '127.0.0.1']
+ALLOWED_HOSTS = ['feedbackpalladium.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://feedbackpalladium.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://feedbackpalladium.up.railway.app']
                         
 # Application definition
 
