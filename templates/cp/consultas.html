@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h1 class="display-4">Feedback de Desempenho</h1>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div id='card_consulta' class="card-body">
+          <h6 class="card-title">Pesquisar por Nome</h6>
+          <form method="GET"> 
+            {% csrf_token %} 
+                 <div> 
+                 <input type="text" name="nome" placeholder="Informe Nome" maxlength="20" style="margin: 4% 0% 6% 0%;">
+                 <button class="btn btn-primary">Pesquisar</button>
+                  <button class="btn btn-warning" name="todos">Visualizar Tudo</button>
+                  </div> 
+          </form>   
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div id='card_consulta' class="card-body">
+          <h6 class="card-title">Pesquisar por Departamento</h6>
+          <form method="GET"> 
+            {% csrf_token %} 
+                 <div> 
+                 <input type="text" name="dpto" placeholder="Informe o departamento" maxlength="20" style="margin: 4% 0% 6% 0%;">
+                 <button class="btn btn-primary">Pesquisar</button>
+                  <button class="btn btn-warning" name="todos">Visualizar Tudo</button>
+                  </div> 
+          </form>   
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div id='card_consulta' class="card-body">
+          <h6 class="card-title">Pesquisar por Função</h6>
+          <form method="GET"> 
+            {% csrf_token %} 
+                  <div > 
+                    <input  type="text" name="função" placeholder="Informe a função" maxlength="20" style="margin: 4% 0% 6% 0%;">
+                    <button class="btn btn-primary">Pesquisar</button>
+                    <button class="btn btn-warning" name="todos">Visualizar Tudo</button>
+                  </div>
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <table class="table table-hover table-bordered table-secondary" >
+    <tbody>
+       <thead class="thead-light">
+        <tr>
+          <th>Colaborador</th>
+          <th>Departamento</th>
+          <th>Função</th>
+          <th>Visualizar</th>
+          <th>Apagar</th>
+      
+      
+        </thead>
+          
+         </tr>
+         {% for a in pesquisa %} 
+        <tr>
+          <td>{{ a.colaborador|default_if_none:"&nbsp;" }}</td>
+          <td>{{ a.departamento|default_if_none:"&nbsp;"}}</td>
+          <td>{{ a.função|default_if_none:"&nbsp;"}}</td>
+          <td><a href="/editar_lista/{{a.id}}"><i class="material-icons" data-md-tooltip="Editar">edit</i></a></td>
+          <td><a href="/deletar_entrevista/{{a.id}}"><i class="material-icons" style=color:crimson data-md-tooltip="Apagar">delete</i></a></td>    
+       </tr>
+       {% endfor %} 
+      </tbody>
+    </table>
+</main>
+
+
+
+
+{% endblock %}

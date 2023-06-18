@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h1 class="display-4">Feedback de Desempenho</h1>
+  <br>
+  <form method="post">
+        {% csrf_token %}
+  <div class="card-group" >
+    <div class="card" id='card_pesquisa1'>
+       <div class="card-body">
+        <h5 class="card-title">Colaborador</h5>
+        {{ pesquisa.colaborador|as_crispy_field }}
+      </div>
+    </div>
+    <div class="card" id='card_pesquisa1'>
+      <div class="card-body">
+        <h5 class="card-title">Departamento</h5>
+        {{ pesquisa.departamento|as_crispy_field }}
+      </div>
+    </div>
+    <div class="card" id='card_pesquisa1'>
+       <div class="card-body">
+        <h5 class="card-title">Cargo</h5>
+        {{ pesquisa.função|as_crispy_field }}
+       </div>
+    </div>
+   </div>
+   <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5 class="card-title text-center"> O colaborador <p> demonstra uma atitude positiva no ambiente de trabalho?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5>Selecione uma opção:</h5>
+          <select id="competency-1" name='atitude_positiva' required>   
+            <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+            <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+            <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+            <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+          </select>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{ pesquisa.justificativa01|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5>Como você avalia a sua capacidade de trabalhar em equipe e colaborar com seus colegas em projetos ou tarefas?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5>Selecione uma opção:</h5>
+          <select id="competency-1" name='trabalho_em_equipe' required>   
+            <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+            <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+            <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+            <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+          </select>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{ pesquisa.justificativa02|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5>Como você avalia sua habilidade de compreender as necessidades dos clientes e atendê-las de forma eficaz?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5>Selecione uma opção:</h5>
+          <select id="competency-1" name='atendimento_eficaz_cliente' required>   
+            <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+            <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+            <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+            <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+          </select>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{ pesquisa.justificativa03|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card-group"  >
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+           <h5>Como você avalia sua habilidade de se comunicar e compartilhar suas ideias e opiniões com a liderança em sua empresa?</h5>
+         </div>
+       </div>
+ 
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+          <h5>Selecione uma opção:</h5>
+           <select id="competency-1" name='comunicação_com_liderança' required>   
+            <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+            <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+            <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+            <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+           </select>
+         </div>
+       </div>
+ 
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+           <h5> {{ pesquisa.justificativa04|as_crispy_field }}</h5>
+         </div>
+       </div>
+     </div>
+     <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5>Como você avalia a sua capacidade de promover a coesão e um bom ambiente de trabaho entre seus colegas?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5>Selecione uma opção:</h5>
+            <select id="competency-1" name='promoção_união' required>   
+              <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+              <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+              <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+              <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+            </select>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ pesquisa.justificativa05|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5>Em que medida você busca melhorar a qualidade do seu trabalho e dos projetos em que está envolvido?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5>Selecione uma opção:</h5>
+            <select id="competency-1" name='melhorar_qualidade' required>  
+              <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+              <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+              <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+              <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+            </select>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ pesquisa.justificativa06|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5>O colaborador consegue encontrar soluções criativas para redução de custos sem comprometer a qualidade do trabalho?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5>Selecione uma opção:</h5>
+            <select id="competency-1" name='criatividade_redução_custos' required>   
+              <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+              <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+              <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+              <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+            </select>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ pesquisa.justificativa07|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card-group"  >
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+             <h5>O colaborador se mostra com uma atitude positiva, construtiva e flexível diante das mudanças?</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+            <h5>Selecione uma opção:</h5>
+             <select id="competency-1" name='atitude_diante_mudanças' required>   
+              <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+              <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+              <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+              <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+             </select>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+             <h5> {{ pesquisa.justificativa08|as_crispy_field }}</h5>
+           </div>
+         </div>
+       </div>
+       <br>
+      <div class="card-group"  >
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+             <h5>O colaborador propõe ideias positivas e criativas que contribuem para o bom ambiente de trabalho?</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+            <h5>Selecione uma opção:</h5>
+             <select id="competency-1" name='ideias_para_bom_ambiente' required>   
+              <option value="Deve Melhorar">Melhorável &#x1F3C6 </option>
+              <option value="Em Desenvolvimento">Adequado &#x1F3C6&#x1F3C6 </option>
+              <option value="Competente">Se destaca &#x1F3C6&#x1F3C6&#x1F3C6  </option>
+              <option value="Alta Performance">Exemplar &#x1F3C6&#x1F3C6&#x1F3C6&#x1F3C6 </option> 
+             </select>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+             <h5> {{ pesquisa.justificativa09|as_crispy_field }}</h5>
+           </div>
+         </div>
+       </div>
+       <br>
+       <div class="card-group" >
+        <div class="card" id='card_pesquisa11'>
+           <div class="card-body">
+            <h6 class="card-title">Pontos Fortes</h6>
+            {{ pesquisa.pontos_fortes|as_crispy_field }}
+          </div>
+        </div>
+        <div class="card" id='card_pesquisa11'>
+          <div class="card-body">
+            <h6 class="card-title">Pontos a Reforçar</h6>
+            {{ pesquisa.pontos_reforçar|as_crispy_field }}
+          </div>
+        </div>
+        <div class="card" id='card_pesquisa11'>
+           <div class="card-body">
+            <h6 class="card-title">Compromissos Estabelecidos</h6>
+            {{ pesquisa.compromissos|as_crispy_field }}
+           </div>
+           <input type="submit" class="btn btn-success" value="Salvar">
+        </div>
+       </div>
+       <br>
+   
+</form>
+<br>
+<br>
+</div>
+</main>
+
+
+
+
+{% endblock %}

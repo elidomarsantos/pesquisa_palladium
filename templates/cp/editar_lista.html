@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h1 class="display-4">Feedback de Desempenho</h1>
+  <br>
+  <form method="post">
+        {% csrf_token %}
+  <div class="card-group" >
+    <div class="card" id='card_pesquisa1'>
+       <div class="card-body">
+        <h5 class="card-title">Colaborador</h5>
+        {{ form.colaborador|as_crispy_field }}
+      </div>
+    </div>
+    <div class="card" id='card_pesquisa1'>
+      <div class="card-body">
+        <h5 class="card-title">Departamento</h5>
+        {{ form.departamento|as_crispy_field }}
+      </div>
+    </div>
+    <div class="card" id='card_pesquisa1'>
+       <div class="card-body">
+        <h5 class="card-title">Cargo</h5>
+        {{ form.função|as_crispy_field }}
+       </div>
+    </div>
+   </div>
+   <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5 class="card-title text-center"> O colaborador <p> demonstra uma atitude positiva no ambiente de trabalho?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5> Avaliação</h5>
+          <h5> {{ form.atitude_positiva|as_crispy_field }}</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa2'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{ form.justificativa01|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5>Como você avalia a sua capacidade de trabalhar em equipe e colaborar com seus colegas em projetos ou tarefas?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5> Avaliação</h5>
+          <h5> {{ form.trabalho_em_equipe|as_crispy_field }}</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa3'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{form.justificativa02|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+   <div class="card-group"  >
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5>Como você avalia sua habilidade de compreender as necessidades dos clientes e atendê-las de forma eficaz?</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5> Avaliação</h5>
+          <h5> {{ form.atendimento_eficaz_cliente|as_crispy_field }}</h5>
+        </div>
+      </div>
+
+      <div class="card" id='card_pesquisa4'>
+        <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+          <h5> {{ form.justificativa03|as_crispy_field }}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card-group"  >
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+           <h5>Como você avalia sua habilidade de se comunicar e compartilhar suas ideias e opiniões com a liderança em sua empresa?</h5>
+         </div>
+       </div>
+ 
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+          <h5> Avaliação</h5>
+          <h5> {{ form.comunicação_com_liderança|as_crispy_field }}</h5>
+         </div>
+       </div>
+ 
+       <div class="card" id='card_pesquisa5'>
+         <div class="card-body">
+          <h5> Justificativa (Opcional)</h5>
+           <h5> {{ form.justificativa04|as_crispy_field }}</h5>
+         </div>
+       </div>
+     </div>
+     <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5>Como você avalia a sua capacidade de promover a coesão e um bom ambiente de trabaho entre seus colegas?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5> Avaliação</h5>
+          <h5> {{ form.promoção_união|as_crispy_field }}</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa6'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ form.justificativa05|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5>Em que medida você busca melhorar a qualidade do seu trabalho e dos projetos em que está envolvido?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5> Avaliação</h5>
+            <h5> {{ form.melhorar_qualidade|as_crispy_field }}</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa7'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ form.justificativa06|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <br>
+     <div class="card-group"  >
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5>O colaborador consegue encontrar soluções criativas para redução de custos sem comprometer a qualidade do trabalho?</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5> Avaliação</h5>
+            <h5> {{ form.criatividade_redução_custos|as_crispy_field }}</h5>
+          </div>
+        </div>
+  
+        <div class="card" id='card_pesquisa8'>
+          <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+            <h5> {{ form.justificativa07|as_crispy_field }}</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card-group"  >
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+             <h5>O colaborador se mostra com uma atitude positiva, construtiva e flexível diante das mudanças?</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+            <h5> Avaliação</h5>
+            <h5> {{ form.atitude_diante_mudanças|as_crispy_field }}</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa9'>
+           <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+             <h5> {{ form.justificativa08|as_crispy_field }}</h5>
+           </div>
+         </div>
+       </div>
+       <br>
+      <div class="card-group"  >
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+             <h5>O colaborador propõe ideias positivas e criativas que contribuem para o bom ambiente de trabalho?</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+            <h5> Avaliação</h5>
+            <h5> {{ form.ideias_para_bom_ambiente|as_crispy_field }}</h5>
+           </div>
+         </div>
+   
+         <div class="card" id='card_pesquisa10'>
+           <div class="card-body">
+            <h5> Justificativa (Opcional)</h5>
+             <h5> {{ form.justificativa09|as_crispy_field }}</h5>
+           </div>
+         </div>
+       </div>
+       <br>
+       <div class="card-group" >
+        <div class="card" id='card_pesquisa11'>
+           <div class="card-body">
+            <h6 class="card-title">Pontos Fortes</h6>
+            {{ form.pontos_fortes|as_crispy_field }}
+          </div>
+        </div>
+        <div class="card" id='card_pesquisa11'>
+          <div class="card-body">
+            <h6 class="card-title">Pontos a Reforçar</h6>
+            {{ form.pontos_reforçar|as_crispy_field }}
+          </div>
+        </div>
+        <div class="card" id='card_pesquisa11'>
+           <div class="card-body">
+            <h6 class="card-title">Compromissos Estabelecidos</h6>
+            {{ form.compromissos|as_crispy_field }}
+           </div>
+           <a href="/consultas" class="btn btn-danger" role="button" aria-pressed="true">Voltar</a>
+        </div>
+       </div>
+       <br>
+   
+</form>
+<br>
+<br>
+</div>
+</main>
+
+
+
+
+{% endblock %}
