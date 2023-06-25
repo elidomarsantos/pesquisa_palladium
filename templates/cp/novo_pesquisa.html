@@ -11,22 +11,28 @@
   <div class="card-group" >
     <div class="card" id='card_pesquisa1'>
        <div class="card-body">
+        <h5 class="card-title">Matrícula</h5>
+        {{ pesquisa.matrícula|as_crispy_field }}
+      </div>
+    </div>
+    <div class="card" id='card_pesquisa1'>
+      <div class="card-body">
         <h5 class="card-title">Colaborador</h5>
         {{ pesquisa.colaborador|as_crispy_field }}
       </div>
     </div>
     <div class="card" id='card_pesquisa1'>
-      <div class="card-body">
+       <div class="card-body">
         <h5 class="card-title">Departamento</h5>
         {{ pesquisa.departamento|as_crispy_field }}
-      </div>
-    </div>
-    <div class="card" id='card_pesquisa1'>
-       <div class="card-body">
-        <h5 class="card-title">Cargo</h5>
-        {{ pesquisa.função|as_crispy_field }}
        </div>
     </div>
+    <div class="card" id='card_pesquisa1'>
+      <div class="card-body">
+       <h5 class="card-title">Cargo</h5>
+       {{ pesquisa.função|as_crispy_field }}
+      </div>
+   </div>
    </div>
    <br>
    <div class="card-group"  >

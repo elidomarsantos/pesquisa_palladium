@@ -3,6 +3,7 @@ from django.db import models
 
 class Pesquisa(models.Model):
     
+    matrícula = models.CharField(max_length=60, blank=True, null=True, verbose_name='')
     colaborador = models.CharField(max_length=60, blank=True, null=True, verbose_name='')
     departamento = models.CharField(max_length=60, blank=True, null=True, verbose_name='')
     função = models.CharField(max_length=60, blank=True, null=True, verbose_name='')
